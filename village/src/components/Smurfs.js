@@ -1,28 +1,34 @@
-import React, { Component } from 'react';
+import React  from 'react';
 
 import Smurf from './Smurf';
 
-class Smurfs extends Component {
-  render() {
-    return (
-      <div className="Smurfs">
-        <h1>Smurf Village</h1>
-        <ul>
-          {this.props.smurfs.map(smurf => {
-            return (
+
+const Smurfs = props => {
+  function routeToSmurf(event, smurf) {
+    event.preventDefault();
+    props.history.push(`/${smurf.id}`);
+  }
+  return (
+    <div className="Smurfs">
+      <h1>Smurf Village</h1>
+      <ul>
+        {props.smurfs.map(smurf => {
+          return (
+            <div onClick={event => routeToSmurf(event, smurf)}>
               <Smurf
                 name={smurf.name}
                 id={smurf.id}
                 age={smurf.age}
                 height={smurf.height}
                 key={smurf.id}
+                deleteSmurf={this.deleteSmurf}
               />
-            );
-          })}
-        </ul>
-      </div>
-    );
-  }
+            </div>
+          );
+        })}
+      </ul>
+    </div>
+  );
 }
 
 Smurf.defaultProps = {
