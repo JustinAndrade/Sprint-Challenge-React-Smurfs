@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Home = props => {
-    console.log(props);
     const routeToVillage = event => {
         event.preventDefault();
         props.history.push('/smurfville');

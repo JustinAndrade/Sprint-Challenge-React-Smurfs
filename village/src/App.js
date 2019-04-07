@@ -5,7 +5,7 @@ import { Route, NavLink } from 'react-router-dom';
 import './App.css';
 import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
-import Smurf from './components/Smurf';
+import Smurf from './components/Smurf'
 import Home from './components/Home';
 
 class App extends Component {
@@ -16,8 +16,8 @@ class App extends Component {
     };
   }
 
-  updateSmurf = newSmurf => {
-    this.setState({ smurfs: newSmurf });
+  updateSmurf = newSmurfs => {
+    this.setState({ smurfs: newSmurfs });
   }
 
   componentDidMount() {
@@ -33,20 +33,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>Smurf Village</h1>
       <nav>
         <NavLink exact to='/'>
           Home
         </NavLink>
-        <NavLink exact to='smurfville'>
-          The Village
+        <NavLink exact to='/smurfville'>
+          SmurfVille
         </NavLink>
-        <NavLink exact to='smurf-form'>
+        <NavLink exact to='/smurf-form'>
           Add Smurf
         </NavLink>
       </nav>
       <Route
-        exact path='/' 
-        component={Home}
+        exact path='/' component={Home}
       />
       <Route
         exact
@@ -70,16 +70,17 @@ class App extends Component {
           />
         )}
       />
-      <Route
-        path='/smurfville/:id'
-        render={props => (
-          <Smurf
-            {...props}
-            smurfs={this.state.smurfs}
-            updateSmurf={this.updateSmurf}
-          />
-        )}
-      />
+        <Route
+          exact
+          path='/smurfville/:smurfId'
+          render={props => (
+            <Smurf
+              {...props}
+              smurfs={this.state.smurfs}
+              updateSmurf={this.updateSmurf}
+            />
+          )}
+        />
       </div>
     );
   }
