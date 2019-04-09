@@ -9,9 +9,9 @@ const Smurf = props => {
         .delete(`http://localhost:3333/smurfs/${smurf.id}`)
         .then(response => {
           props.updateSmurf(response.data);
-          props.history.push('/smurfville');
         })
         .catch(err => console.log(err));
+        props.history.push('/smurfville');
     }
 
   return (
