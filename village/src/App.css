@@ -1,3 +1,26 @@
 .App {
   text-align: center;
 }
+
+h1 {
+  margin: 10px auto;
+  color: #6BB7FF;
+  text-shadow: 1px 2px 1px black;
+}
+
+nav {
+  margin: 20px 0;
+}
+
+ nav a {
+   margin: 15px;
+   text-decoration: none;
+   color: black;
+   text-shadow: 1px 1px #6BB7FF;
+ }
+
+ nav a:hover {
+   color: yellow;
+   font-weight: bold;
+   text-shadow: 1px 1px black;
+ }

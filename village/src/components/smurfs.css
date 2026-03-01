@@ -1,0 +1,86 @@
+h3 {
+    margin: 0;
+}
+
+.home-image {
+    width: auto;
+    height: 475px;
+}
+
+.visit-button {
+    border: 1px solid black;
+    border-radius: 30px;
+    box-shadow: 1px 3px 5px 1px;
+    cursor: pointer;
+    padding: 10px 30px;
+    background: #6BB7FF;
+    display: flex;
+    margin: 0 auto;
+}
+
+.visit-button:hover {
+    background: yellow;
+}
+
+.smurf-link {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    width: 238px;
+}
+
+.smurf {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 25px auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 40px 0;
+}
+
+.smurf-header {
+    text-decoration: none;
+    background: #6BB7FF;
+    border-bottom: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    margin: 0 auto;
+    display: flex;
+    padding: 10px 50px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.add-button {
+    margin: 10px;
+    background: #27B310;
+    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 50%;
+    height: 80px;
+}
+
+.add-button:hover {
+    background: #27B310;
+    color: black;
+    font-weight: bold;
+}
+
+.delete-smurf {
+    cursor: pointer;
+}
+
+.delete-smurf:hover {
+    color: red;
+}
